@@ -57,8 +57,8 @@ import { revelio } from 'revelio'
   };
 </script>
 ```
-|:======:|:======:|
 |**Variable**|**Description**|
+|:-----:|:-----|
 |root|IntersectionObserver `root` element. Default is the browser viewport, but can be any scrollable element (eg. `document.body`)|
 |rootMargin|Used to modify the `root` element shape. Can only be set if `root` is not `null` (viewport).|
 |threshold|Amount (%) that an element must have entered the `root` to trigger the animation. Decimal value from 0.00 to 1.00|
