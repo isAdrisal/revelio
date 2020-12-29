@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "A very small library to reveal elements on scroll using an IntersectionObserver and CSS.",
   "main": "dist/revelio.cjs.js",
-  "module": "revelio.js",
+  "module": "dist/revelio.es5.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/isAdrisal/revelio.git"
