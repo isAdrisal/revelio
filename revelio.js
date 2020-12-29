@@ -23,21 +23,8 @@ const revelio = () => {
   
   // IntersectionObserver callback function.
   const handleIntersection = (entries, observer) => {
-    let vw, vh = null;
-    if (variables.root === null) {
-      const html = document.querySelector('html');
-      vw = html.clientWidth;
-      vh = html.clientHeight;
-    };
     entries.forEach(entry => {
-      // Fix for intermittent Chrome bug with improperly calculated
-      // viewport size on first callback instance.
-      if (vw && vh) {
-        const bounds = entry.rootBounds;
-        if (bounds.width !== vw || bounds.height !== vh) return;
-      };
-
-      // Skip non-intersecting elements on first callback instance.
+      // Skip non-intersecting elements.
       if (entry.isIntersecting === false) return;
       // Apply animations.
       const target = entry.target;

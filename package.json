@@ -17,7 +17,8 @@
   "scripts": {
     "build": "npm run build:es5 & npm run build:cjs",
     "build:es5": "mkdir -p dist && babel revelio.js --out-file dist/revelio.es5.js",
-    "build:cjs": "mkdir -p dist && babel --no-babelrc revelio.js --out-file dist/revelio.cjs.js"
+    "build:cjs": "mkdir -p dist && babel --no-babelrc revelio.js --out-file dist/revelio.cjs.js",
+    "publish": "yarn build && npm publish"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
