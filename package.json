@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "A very small library to reveal elements on scroll using an IntersectionObserver and CSS.",
   "main": "revelio.mjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/isAdrisal/revelio.git"
@@ -15,5 +12,10 @@
   "bugs": {
     "url": "https://github.com/isAdrisal/revelio/issues"
   },
-  "homepage": "https://github.com/isAdrisal/revelio#readme"
+  "homepage": "https://github.com/isAdrisal/revelio#readme",
+  "scripts": {
+    "build": "npm run build:es5 & npm run build:cjs",
+    "build:es5": "mkdir -p dist && ../../node_modules/.bin/babel revelio.js --out-file dist/revelio.es5.js",
+    "build:cjs": "mkdir -p dist && ../../node_modules/.bin/babel --no-babelrc revelio.js --out-file dist/revelio.cjs.js"
+  }
 }
