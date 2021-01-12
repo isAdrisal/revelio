@@ -51,10 +51,12 @@ import { revelio } from 'revelio'
 ```
 // Default values shown.
 <script>
-  const window.revelioConfig = {
+  window.revelioConfig = {
     root: null,
     rootMargin: null,
     threshold: 0.25,
+    ignoreDisplayNone: true,
+    ignoreHidden: false,
   };
 </script>
 ```
@@ -63,3 +65,5 @@ import { revelio } from 'revelio'
 |root|IntersectionObserver `root` element. Default is the browser viewport, but can be any scrollable element represented by a DOMString (eg. `document.body`)|
 |rootMargin|Used to modify the `root` element shape. Can only be set if `root` is not `null` (viewport).|
 |threshold|Amount (%) that an element must have entered the `root` to trigger the animation. Decimal value from 0.00 to 1.00|
+|ignoreDisplayNone|Whether to ignore elements with `display: none` when triggering animations. Boolean value that defaults to `true`.|
+|ignoreHidden|Whether to ignore elements with `visibility: hidden` when triggering animations. Boolean value that defaults to `false`.|
