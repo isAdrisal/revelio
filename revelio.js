@@ -12,8 +12,8 @@ const revelio = () => {
   variables.ignoreDisplayNone = window.revelioConfig && window.revelioConfig.ignoreDisplayNone || true;
   variables.ignoreHidden = window.revelioConfig && window.revelioConfig.ignoreHidden || false;
 
-  // Find all DOM elements with [data-revelio] attribute. Return if none.
-  const animatedElements = document.querySelectorAll('[data-revelio]');
+  // Find all DOM elements with non-empty [data-revelio] attribute. Return if none.
+  const animatedElements = document.querySelectorAll('[data-revelio]:not([data-revelio=""])');
   if (animatedElements.length < 1) { return };
   
   // Don't hide content from Google; no IntersectionObserver fallback.
