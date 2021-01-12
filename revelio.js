@@ -10,8 +10,8 @@ const revelio = () => {
   variables.rootMargin = variables.root && window.revelioConfig && window.revelioConfig.rootMargin || null;
   variables.threshold = window.revelioConfig && window.revelioConfig.threshold || 0.25;
 
-  // Find all DOM elements with [data-revelio] attribute. Return if none.
-  const animatedElements = document.querySelectorAll('[data-revelio]');
+  // Find all DOM elements with non-empty [data-revelio] attribute. Return if none.
+  const animatedElements = document.querySelectorAll('[data-revelio]:not([data-revelio=""])');
   if (animatedElements.length < 1) { return };
   
   // Don't hide content from Google; no IntersectionObserver fallback.
